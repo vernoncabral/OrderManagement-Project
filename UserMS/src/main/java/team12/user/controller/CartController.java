@@ -101,17 +101,5 @@ public class CartController {
 		return responseEntity;
 
 	}
-//
-//	@GetMapping(value = "api/cart/{buyerId}")
-//	public List<Cart> getAllCartItem(@PathVariable int buyerId) {
-//		return cartService.getAllCartItem(buyerId);
-//
-//	}
-//
-//	@GetMapping(value = "api/cart/checkout/{buyerId}")
-//	public List<Cart> checkOutFromCart(@PathVariable int buyerId) {
-//		return cartService.checkOutFromCart(buyerId);
-//
-//	}
 
 }

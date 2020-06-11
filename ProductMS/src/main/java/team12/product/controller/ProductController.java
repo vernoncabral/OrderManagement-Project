@@ -38,15 +38,7 @@ public class ProductController {
         return productService.saveProduct(product.convertToEntity());
     }
 
-//    @PostMapping("/add/many")
-//    public Object addProdcuct(@RequestBody Iterable<ProductDTO> products) {
-//        List<Product> productEntities = new ArrayList<>();
-//        for (ProductDTO product : products) {
-//            productEntities.add(product.convertToEntity());
-//        }
-//        LOGGER.info("Adding " + productEntities.size() + " Product");
-//        return productService.saveProducts(productEntities);
-//    }
+
 
     @GetMapping()
     public Object getProducts() {
@@ -62,34 +54,7 @@ public class ProductController {
         return products;
     }
 
-//    @PostMapping()
-//    public Object getProductsByIds(@RequestBody ProductId productIds) {
-//        LOGGER.info("Retriveing Selected Products");
-//
-//        List<Product> products = (List<Product>) productService.getProductsByIds(productIds);
-//
-//        if (products.size() == 0) {
-//            Message msg = new Message();
-//            msg.setMessage("No products of that Id are available");
-//        }
-//
-//        return products;
-//    }
 
-//    @GetMapping("/seller/{sellerId}")
-//    public Object getProductsOfseller(@PathVariable(name = "sellerId") Integer sellerId) {
-//        LOGGER.info("Retriveing Products based on sellerId " + sellerId);
-//
-//        List<Product> products = (List<Product>) productService.getProductsBySellerId(sellerId);
-//
-//        if (products.size() == 0) {
-//            Message msg = new Message();
-//            msg.setMessage("No products are available by this seller");
-//            return msg;
-//        }
-//
-//        return products;
-//    }
 
     @GetMapping("/{productId}")
     public Object findProductById(@PathVariable(name = "productId") Integer productId) {
@@ -141,10 +106,7 @@ public class ProductController {
             Message msg = new Message();
             msg.setMessage("The Stock should be at least 10");
             return msg;
-//        } else if (product.getPrice() != null && product.getPrice().longValue() < 100) {
-//            Message msg = new Message();
-//            msg.setMessage("The Product price should be Minimum 200");
-//            return msg;
+
         }
 
         return productService.updateProduct(productEntity);

@@ -85,21 +85,5 @@ public class SubscriptionController {
         return msg;
     }
 
-//    @PutMapping("/update")
-//    public Object updateSubscription(@RequestBody SubscriptionDTO subscription) {
-//        LOGGER.info("Update Subscription For buyer " + subscription.getBuyerid());
-//
-//        try {
-//            subscriptionService.updateSubscription(subscription.convertToEntity());
-//            Message msg = new Message();
-//            msg.setMessage("Subscription Updated Successfully :)");
-//            return msg;
-//        } catch (Exception e){
-//            Message msg = new Message();
-//            msg.setMessage("Subscription Updated Failed :( Make sure you have a subscription First");
-//            return msg;
-//        }
-//
-//
-//    }
+
 }
